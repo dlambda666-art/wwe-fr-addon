@@ -1,0 +1,12 @@
+{
+  "name": "wwe-fr-addon",
+  "version": "1.0.0",
+  "description": "Addon WWE français pour Stremio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "1.6.10"
+  }
+}
