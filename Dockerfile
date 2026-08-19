@@ -11,6 +11,7 @@ COPY . .
 
 EXPOSE 7000
 
-CMD ["node", "server
+CMD ["node", "server.js"]
 
-.js"]
+
+
