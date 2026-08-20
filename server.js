@@ -8,8 +8,7 @@ const manifest = {
   logo: "https://www.stremio.com/website/stremio-logo-small.png",
   resources: ["stream"],
   types: ["series"],
-  catalogs: [],
-  idPrefixes: ["wwe-"]
+catalogs: []
 };
 
 const builder = new addonBuilder(manifest);
