@@ -24,7 +24,7 @@ builder.defineStreamHandler(async ({ type, id }) => {
   };
 });
 
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 8080;
 
 serveHTTP(builder.getInterface(), {
   port: port
