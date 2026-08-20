@@ -1,5 +1,22 @@
+const { addonBuilder, serveHTTP } = require("stremio-addon-sdk");
+
+const manifest = {
+  id: "community.wwe.fr",
+  version: "1.0.0",
+  name: "WWE France",
+  description: "Addon WWE français pour Stremio",
+  logo: "https://www.stremio.com/website/stremio-logo-small.png",
+  resources: ["stream"],
+  types: ["series"],
+  catalogs: [],
+  idPrefixes: ["wwe-"]
+};
+
+const builder = new addonBuilder(manifest);
+
 builder.defineStreamHandler(async ({ type, id }) => {
-  console.log("=================================");
+
+  console.log("==============================");
   console.log("WWE REQUEST");
   console.log("Type :", type);
   console.log("ID   :", id);
@@ -11,6 +28,7 @@ builder.defineStreamHandler(async ({ type, id }) => {
 
   // Exemple attendu :
   // wwe-xxx:28:32
+
   const parts = id.split(":");
 
   if (parts.length < 3) {
