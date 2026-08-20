@@ -9,7 +9,7 @@ RUN npm install stremio-addon-sdk@1.6.10
 
 COPY . .
 
-EXPOSE 7000
+EXPOSE 8080
 
 CMD ["node", "server.js"]
 
