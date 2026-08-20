@@ -56,8 +56,12 @@ builder.defineStreamHandler(async ({ type, id }) => {
   console.log("Appel Torrentio...");
 
   try {
-    const response = await fetch(streamUrl);
-
+    
+   const response = await fetch(streamUrl, {
+  headers: {
+    "User-Agent": "Mozilla/5.0"
+  }
+});
     console.log("Torrentio HTTP :", response.status);
 
     if (!response.ok) {
