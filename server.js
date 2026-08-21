@@ -50,7 +50,7 @@ builder.defineStreamHandler(async ({ type, id }) => {
   const streamUrl =
     torrentioUrl.replace(
       "/manifest.json",
-      `/stream/series/${seriesId}:${season}:${episode}`
+      `/stream/series/${seriesId}:${season}:${episode}.json`
     );
 
   console.log("URL STREMTHRU APPELÉE :", streamUrl);
@@ -61,7 +61,8 @@ console.log("Appel Torrentio...");
   
 
   try {
-    
+   console.log("URL FINALE :", streamUrl);
+console.log("ID ENVOYÉ :", `${seriesId}:${season}:${episode}`); 
    const response = await fetch(streamUrl, {
   headers: {
     "User-Agent": "Mozilla/5.0"
