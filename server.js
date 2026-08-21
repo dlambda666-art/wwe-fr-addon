@@ -77,6 +77,7 @@ console.log("Appel Torrentio...");
     const data = await response.json();
 
     const streams = data.streams || [];
+    console.log("REPONSE STREMTHRU :", JSON.stringify(data));
 
     console.log("Flux Torrentio reçus :", streams.length);
 
