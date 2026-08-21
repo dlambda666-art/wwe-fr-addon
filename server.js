@@ -54,7 +54,11 @@ builder.defineStreamHandler(async ({ type, id }) => {
     );
 
   console.log("URL STREMTHRU APPELÉE :", streamUrl);
-  console.log("Appel Torrentio...");
+const u = new URL(streamUrl);
+console.log("STREMTHRU HOST :", u.origin);
+console.log("STREMTHRU PATH :", u.pathname);
+console.log("Appel Torrentio...");
+  
 
   try {
     
