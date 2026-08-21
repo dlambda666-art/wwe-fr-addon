@@ -53,6 +53,7 @@ builder.defineStreamHandler(async ({ type, id }) => {
       `/stream/series/${seriesId}:${season}:${episode}.json`
     );
 
+  console.log("URL STREMTHRU APPELÉE :", streamUrl);
   console.log("Appel Torrentio...");
 
   try {
